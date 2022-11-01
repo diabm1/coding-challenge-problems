@@ -19,32 +19,97 @@
 //   let T = "A";
 //   let G = "C";
 //   let C = "G";
-let dna = "ATGC";
+let dna = "ATGCATGC";
+// dna.split("A").join("U")
+// dna.split("T").join("A")
+// dna.split("G").join("C")
+// dna.split("C").join("A")
+dna.replaceAll("A", "U"); //replaces all occurences of "A" with "U" and returns a new string "UTGCUTGC"
+dna.replaceAll("T", "A"); //replaces all occurences of "T" with "A" and returns a new string "AAGCAAGC"
+dna.replaceAll("G", "C"); //replaces all occurences of "G" with "C" and returns a new string "ATCCATCC"
+dna.replaceAll("C", "G"); //replaces all occurences of "C" with "G" and returns a new string "ATGGATGG"
+
+//how do I combine all of the new strings created from each letter with the replace letters in a new string?
+//I just want one solid string, of the replaced letters
+
+// console.log(dna)
 //   console.log(dna.split("")[0]);
 let dnaSplitArr = dna.split("");
+// console.log(typeof dnaSplitArr.join("")) //== string
+
+//what if I just replace each letter
+// console.log(typeof dnaSplitArr[0]) //string
+//because .replaceAll() only works on string from my knowledge so far
+
+console.log(dnaSplitArr[0].replaceAll("A", "U") + " ---> " + dnaSplitArr[0]);
+console.log(dnaSplitArr[1].replaceAll("T", "A") + " ---> " + dnaSplitArr[1]);
+console.log(dnaSplitArr[2].replaceAll("G", "C") + " ---> " + dnaSplitArr[2]);
+console.log(dnaSplitArr[3].replaceAll("C", "G") + " ---> " + dnaSplitArr[3]);
+//now I can replace all the dynamic parts with variables and then put it inside of a loop
+
+//incoming should be dnaSplitArr[i]
+//.replaceAll w/ incoming
+//put above in below for loop
+
+// console.log(dnaSplitArr)
+
+// console.log(dnaSplitArr.join(""))
+
+// console.log(dnaSplitArr[i]);
+// if (dnaSplitArr[0] === "A") {
+//   console.log(dna.replace("A", "U"));
+// }
+// if (dnaSplitArr[1] === "T") {
+//   console.log(dna.replace("T", "A"));
+// }
+// if (dnaSplitArr[2] === "G") {
+//   console.log(dna.replace("G", "C"));
+// }
+// if (dnaSplitArr[3] === "C") {
+//   console.log(dna.replace("C", "G"));
+// }
+
+// if (
+//   dnaSplitArr[0] === "A" &&
+//   dnaSplitArr[1] === "T" &&
+//   dnaSplitArr[2] === "G" &&
+//   dnaSplitArr[3] === "C"
+// ) {
+//   dna.replace("A", "U");
+//   dna.replace("T", "A");
+//   dna.replace("G", "C");
+//   dna.replace("C", "G");
+
+//   console.log(dnaSplitArr.join(""));
+
+//   console.log(dna.join())
+// }
+
+// console.log(dna)
+
 //   console.log(dnaSplitArr.length)
-for (let i = 0; i < dnaSplitArr.length - 1; i++) {
-  //   console.log(dnaSplitArr[i]); // represents each letter of the string array
+for (let i = 0; i < dnaSplitArr.length; i++) {
+  //   console.log(dnaSplitArr[i]); // represents each letter of the string array //dnaSplitArr[i] typeof string, is a string value
+  //   console.log(dnaSplitArr);
+
   // let i = 0;
   // while (i < dnaSplitArr.length - 1) {
   if (dnaSplitArr[i] === "A") {
-    let replace = dna.replace("A", "U");
-    console.log(replace);
+    dna.replaceAll("A", "U");
   } else if (dnaSplitArr[i] === "T") {
-    let replace = dna.replace("T", "A");
-    console.log(replace);
+    dna.replaceAll("T", "A"); //why doesn't it replace the letter here?
   } else if (dnaSplitArr[i] === "G") {
-    let replace = dna.replace("G", "C");
-    console.log(replace);
+    dna.replaceAll("G", "C");
   } else if (dnaSplitArr[i] === "C") {
-    let replace = dna.replace("C", "G");
-    console.log(replace);
+    dna.replaceAll("C", "G");
   }
-//   console.log()
-  // }
+
+  //   console.log(dnaSplitArr);
+  //   console.log(dna)
 }
 
-console.log(dna);
+// console.log(dnaSplitArr.join(""));
+// console.log(dna);
 // }
 
 // dnaToRna();
