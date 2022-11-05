@@ -19,7 +19,8 @@
 //   let T = "A";
 //   let G = "C";
 //   let C = "G";
-let dna = "ATGCATGC";
+let dna = "ATGC";
+let mRna = "UACG";
 // dna.split("A").join("U")
 // dna.split("T").join("A")
 // dna.split("G").join("C")
@@ -34,12 +35,18 @@ dna.replaceAll("C", "G"); //replaces all occurences of "C" with "G" and returns 
 
 // console.log(dna)
 //   console.log(dna.split("")[0]);
-let dnaSplitArr = dna.split("");
+let dnaSplitArr = dna.split("");//string array
+let mRnaSplitArr = mRna.split("");//string array
 // console.log(typeof dnaSplitArr.join("")) //== string
 
 //what if I just replace each letter
 // console.log(typeof dnaSplitArr[0]) //string
 //because .replaceAll() only works on string from my knowledge so far
+
+for (let i = 0; i < array.length; i++) {
+  dnaSplitArr[0].replaceAll("A", "U") + " ---> " + dnaSplitArr[0]
+  
+}
 
 console.log(dnaSplitArr[0].replaceAll("A", "U") + " ---> " + dnaSplitArr[0]);
 console.log(dnaSplitArr[1].replaceAll("T", "A") + " ---> " + dnaSplitArr[1]);
@@ -90,23 +97,34 @@ console.log(dnaSplitArr[3].replaceAll("C", "G") + " ---> " + dnaSplitArr[3]);
 //   console.log(dnaSplitArr.length)
 for (let i = 0; i < dnaSplitArr.length; i++) {
   //   console.log(dnaSplitArr[i]); // represents each letter of the string array //dnaSplitArr[i] typeof string, is a string value
-  //   console.log(dnaSplitArr);
+    console.log(dnaSplitArr[i]);
+    // console.log(dnaSplitArr.length)
+  
 
   // let i = 0;
   // while (i < dnaSplitArr.length - 1) {
-  if (dnaSplitArr[i] === "A") {
-    dna.replaceAll("A", "U");
-  } else if (dnaSplitArr[i] === "T") {
-    dna.replaceAll("T", "A"); //why doesn't it replace the letter here?
-  } else if (dnaSplitArr[i] === "G") {
-    dna.replaceAll("G", "C");
-  } else if (dnaSplitArr[i] === "C") {
-    dna.replaceAll("C", "G");
-  }
+  // if (dnaSplitArr[i] === "A") {
+  //   dna.replaceAll("A", "U");
+  // } else if (dnaSplitArr[i] === "T") {
+  //   dna.replaceAll("T", "A"); //why doesn't it replace the letter here?
+  // } else if (dnaSplitArr[i] === "G") {
+  //   dna.replaceAll("G", "C");
+  // } else if (dnaSplitArr[i] === "C") {
+  //   dna.replaceAll("C", "G");
+  // }
 
   //   console.log(dnaSplitArr);
   //   console.log(dna)
 }
+
+for (let j = 0; j < mRnaSplitArr.length; j++) {
+  // while (j < mRnaSplitArr.length) {
+    console.log(mRnaSplitArr[j])
+  // }    
+}
+
+console.log(mRnaSplitArr.join(""))
+
 
 // console.log(dnaSplitArr.join(""));
 // console.log(dna);
