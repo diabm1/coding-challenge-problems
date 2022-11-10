@@ -19,8 +19,8 @@
 //   let T = "A";
 //   let G = "C";
 //   let C = "G";
-let dna = "ATGC";
-let mRna = "UACG";
+let dna = "ATTAGCGCGATATACGCGTAC";
+// let mRna = "UACG";
 // dna.split("A").join("U")
 // dna.split("T").join("A")
 // dna.split("G").join("C")
@@ -29,31 +29,55 @@ dna.replaceAll("A", "U"); //replaces all occurences of "A" with "U" and returns 
 dna.replaceAll("T", "A"); //replaces all occurences of "T" with "A" and returns a new string "AAGCAAGC"
 dna.replaceAll("G", "C"); //replaces all occurences of "G" with "C" and returns a new string "ATCCATCC"
 dna.replaceAll("C", "G"); //replaces all occurences of "C" with "G" and returns a new string "ATGGATGG"
+let dnaSplitArr = dna.split(""); //string array
+for (let i = 0; i < dnaSplitArr.length; i++) {
+  // console.log(dna.replaceAll(dna, mRna))
+  if (dnaSplitArr[i] === "A") {
+    dna.replaceAll("A", "U");
+  } else if (dnaSplitArr[i] === "T") {
+    dna.replaceAll("T", "A");
+  } else if (dnaSplitArr[i] === "G") {
+    dna.replaceAll("G", "C");
+  } else if (dnaSplitArr[i] === "C") {
+    dna.replaceAll("C", "G");
+  } 
+
+  console.log(dna);
+}
 
 //how do I combine all of the new strings created from each letter with the replace letters in a new string?
 //I just want one solid string, of the replaced letters
 
 // console.log(dna)
 //   console.log(dna.split("")[0]);
-let dnaSplitArr = dna.split(""); //string array
-let mRnaSplitArr = mRna.split(""); //string array
+// let dnaSplitArr = dna.split(""); //string array
+// let mRnaSplitArr = mRna.split(""); //string array
 // console.log(typeof dnaSplitArr.join("")) //== string
 
 //what if I just replace each letter
 // console.log(typeof dnaSplitArr[0]) //string
 //because .replaceAll() only works on string from my knowledge so far
-
+// let joinmRNA = dna.join("")
 // I need to cycle through in order to get a
-for (let i = 0; i < dnaSplitArr.length; i++) {
-  for (let j = 0; j < mRnaSplitArr.length; j++) {
-    // console.log(dnaSplitArr[i].replaceAll(`${dnaSplitArr[i]}`, `${mRnaSplitArr[j]}`) +
-    //   " ---> " +
-    //   dnaSplitArr[i]);
-    console.log(
-      dnaSplitArr[i].replaceAll(`${dnaSplitArr[i]}`, `${mRnaSplitArr[j]}`)
-    );
-  }
-}
+// for (let i = 0; i < dnaSplitArr.length; i++) {
+// console.log(dnaSplitArr[i].replaceAll(`${dnaSplitArr[i]}`, `${mRnaSplitArr[i]}`));//how do i format the output for this to be on a single line
+
+// for (let j = 0; j < mRnaSplitArr.length; j++) {
+//   // console.log(dnaSplitArr[i].replaceAll(`${dnaSplitArr[i]}`, `${mRnaSplitArr[j]}`) +
+//   //   " ---> " +
+//   //   dnaSplitArr[i]);
+//   console.log(
+//     dnaSplitArr[i]
+//     // .replaceAll(`${dnaSplitArr[i]}`, `${mRnaSplitArr[j]}`)
+//   );
+// }
+
+// console.log(dnaSplitArr[i].replace(`${dnaSplitArr[i]}`));
+
+// }
+// console.log(dnaSplitArr.join(""));
+
+// console.log(joinmRNA)
 
 // console.log(dnaSplitArr[0].replaceAll("A", "U") + " ---> " + dnaSplitArr[0]);
 // console.log(dnaSplitArr[1].replaceAll("T", "A") + " ---> " + dnaSplitArr[1]);
@@ -121,11 +145,11 @@ for (let i = 0; i < dnaSplitArr.length; i++) {
   //   console.log(dna)
 }
 
-for (let j = 0; j < mRnaSplitArr.length; j++) {
-  // while (j < mRnaSplitArr.length) {
-  // console.log(mRnaSplitArr[j]);
-  // }
-}
+// for (let j = 0; j < mRnaSplitArr.length; j++) {
+// while (j < mRnaSplitArr.length) {
+// console.log(mRnaSplitArr[j]);
+// }
+// }
 
 // console.log(mRnaSplitArr.join(""));
 
