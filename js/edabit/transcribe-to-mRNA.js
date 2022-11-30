@@ -19,31 +19,54 @@
 //   let T = "A";
 //   let G = "C";
 //   let C = "G";
+
+// function dnaToRna(dna) {
 let dna = "ATTAGCGCGATATACGCGTAC";
+//   let dnaSplitArr = dna.split("");
+//   for (let i = 0; i < dnaSplitArr.length; i++) {
+//     if (dnaSplitArr[i] === "A") {
+//       dna.replace("T", "cat");
+//     }
+//   }
+
+//   console.log(dnaSplitArr);
+// }
+
+// dnaToRna();
 // let mRna = "UACG";
 // dna.split("A").join("U")
 // dna.split("T").join("A")
 // dna.split("G").join("C")
 // dna.split("C").join("A")
-dna.replaceAll("A", "U"); //replaces all occurences of "A" with "U" and returns a new string "UTGCUTGC"
-dna.replaceAll("T", "A"); //replaces all occurences of "T" with "A" and returns a new string "AAGCAAGC"
-dna.replaceAll("G", "C"); //replaces all occurences of "G" with "C" and returns a new string "ATCCATCC"
-dna.replaceAll("C", "G"); //replaces all occurences of "C" with "G" and returns a new string "ATGGATGG"
-let dnaSplitArr = dna.split(""); //string array
-for (let i = 0; i < dnaSplitArr.length; i++) {
-  // console.log(dna.replaceAll(dna, mRna))
-  if (dnaSplitArr[i] === "A") {
-    dna.replaceAll("A", "U");
-  } else if (dnaSplitArr[i] === "T") {
-    dna.replaceAll("T", "A");
-  } else if (dnaSplitArr[i] === "G") {
-    dna.replaceAll("G", "C");
-  } else if (dnaSplitArr[i] === "C") {
-    dna.replaceAll("C", "G");
-  } 
+// dna.replaceAll("A", "U"); //replaces all occurences of "A" with "U" and returns a new string "UTGCUTGC"
+// dna.replaceAll("T", "A"); //replaces all occurences of "T" with "A" and returns a new string "AAGCAAGC"
+// dna.replaceAll("G", "C"); //replaces all occurences of "G" with "C" and returns a new string "ATCCATCC"
+// dna.replaceAll("C", "G"); //replaces all occurences of "C" with "G" and returns a new string "ATGGATGG"
+let dnaSplitArr = dna.split(""); //string array 
+console.log(dnaSplitArr) //['A', 'T', 'T', 'A', 'G','C', 'G', 'C', 'G', 'A','T', 'A', 'T', 'A', 'C','G', 'C', 'G', 'T', 'A','C']
+//if(dnaSplitArr[0] === "A") then turn it into U then move on to next... 
+// for (let i = 0; i < dnaSplitArr.length; i++) {
+//   //   // console.log(dna.replaceAll(dna, mRna))
+//   if (dnaSplitArr[i] === "A") {
+//     dna.replaceAll("A", "U");
+//     // console.log(dna);
+//   }
+//   // } else
+//   if (dnaSplitArr[i] === "T") {
+//     dna.replaceAll("T", "A");
+//     // console.log(dna);
+//   }
+//   if (dnaSplitArr[i] === "G") {
+//     dna.replaceAll("G", "C");
+//     // console.log(dna);
+//   }
+//   if (dnaSplitArr[i] === "C") {
+//     dna.replaceAll("C", "G");
+//     // console.log(dna);
+//   }
 
-  console.log(dna);
-}
+//   //   console.log(dna);
+// }
 
 //how do I combine all of the new strings created from each letter with the replace letters in a new string?
 //I just want one solid string, of the replaced letters
@@ -126,24 +149,24 @@ for (let i = 0; i < dnaSplitArr.length; i++) {
 // console.log(dna)
 
 //   console.log(dnaSplitArr.length)
-for (let i = 0; i < dnaSplitArr.length; i++) {
-  //   console.log(dnaSplitArr[i]); // represents each letter of the string array //dnaSplitArr[i] typeof string, is a string value
-  // console.log(dnaSplitArr[i]);
-  // console.log(dnaSplitArr.length)
-  // let i = 0;
-  // while (i < dnaSplitArr.length - 1) {
-  // if (dnaSplitArr[i] === "A") {
-  //   dna.replaceAll("A", "U");
-  // } else if (dnaSplitArr[i] === "T") {
-  //   dna.replaceAll("T", "A"); //why doesn't it replace the letter here?
-  // } else if (dnaSplitArr[i] === "G") {
-  //   dna.replaceAll("G", "C");
-  // } else if (dnaSplitArr[i] === "C") {
-  //   dna.replaceAll("C", "G");
-  // }
-  //   console.log(dnaSplitArr);
-  //   console.log(dna)
-}
+// for (let i = 0; i < dnaSplitArr.length; i++) {
+//   console.log(dnaSplitArr[i]); // represents each letter of the string array //dnaSplitArr[i] typeof string, is a string value
+// console.log(dnaSplitArr[i]);
+// console.log(dnaSplitArr.length)
+// let i = 0;
+// while (i < dnaSplitArr.length - 1) {
+// if (dnaSplitArr[i] === "A") {
+//   dna.replaceAll("A", "U");
+// } else if (dnaSplitArr[i] === "T") {
+//   dna.replaceAll("T", "A"); //why doesn't it replace the letter here?
+// } else if (dnaSplitArr[i] === "G") {
+//   dna.replaceAll("G", "C");
+// } else if (dnaSplitArr[i] === "C") {
+//   dna.replaceAll("C", "G");
+// }
+//   console.log(dnaSplitArr);
+//   console.log(dna)
+// }
 
 // for (let j = 0; j < mRnaSplitArr.length; j++) {
 // while (j < mRnaSplitArr.length) {
@@ -158,3 +181,7 @@ for (let i = 0; i < dnaSplitArr.length; i++) {
 // }
 
 // dnaToRna();
+
+// The issue that I'm having is tha not all the letters are being converted with the .replace() method.
+
+// I need to get better with while loops...
