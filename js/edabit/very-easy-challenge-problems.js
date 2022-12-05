@@ -29,5 +29,10 @@ function cubes(a) {
 function calcAge(age) {
   // takes the age in years and returns the age in days.
   // 1 year = 365 days
-  // 65 years = 
+  // 65 years =
+  var DOB = "mARCH 1, 1995";
+  var millisecondsBetweenDOBAnd1970 = Date.parse(DOB);
+  console.log(millisecondsBetweenDOBAnd1970)
+  var millisecondsBetweenNowAnd1970 = Date.now();
+  console.log(millisecondsBetweenNowAnd1970)
 }
